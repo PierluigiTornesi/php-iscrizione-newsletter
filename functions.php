@@ -1,17 +1,30 @@
 <?php 
+    $flag = false;
     if((strpos($email,'@')) &&  (strpos($email,'.'))){
-        $flag = true;
+    $flag = true;
     }
-?>
-
-<?php 
+    $class = '';
     if($email === ''){
-        echo '';
+        $class = 'alert-primary';
     }else{
         if($flag){
-            echo 'La tua email ' . $email . ' é valida';
+            $class = 'alert-success';
         }else{
-            echo 'La tua email ' . $email . ' non é valida';
+            $class = 'alert-danger';
         }
     }
 ?>
+
+<div class="alert   <?php echo $class ?>" role="alert">
+    <?php 
+    if($email === ''){
+        echo 'Inserisci la tua email';
+    }else{
+        if($flag){
+            echo 'La tua email " ' . $email .  ' " é valida';
+        }else{
+            echo 'La tua email " ' . $email .  ' " non é valida';
+        }
+    } 
+    ?>
+</div>
