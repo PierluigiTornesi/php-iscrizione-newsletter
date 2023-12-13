@@ -4,12 +4,9 @@
     if(isset($_GET['email'])){
         $email = $_GET['email'];
         $flag = false;
-
-        if((strpos($email,'@')) &&  (strpos($email,'.'))){
-            $flag = true;
-        }
     }
     var_dump($email);
+    var_dump(__DIR__)
 ?>
 
 <!DOCTYPE html>
@@ -28,17 +25,7 @@
     </form>
 
     <?php 
-    
-    if($email === ''){
-        echo '';
-    }else{
-        if($flag){
-            echo 'La tua email ' . $email . ' é valida';
-        }else{
-            echo 'La tua email ' . $email . ' non é valida';
-        }
-    }
-
+        include __DIR__ . "/functions.php";
     ?>
 </body>
 </html>
