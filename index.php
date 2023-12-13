@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
     $email = '';
     if(isset($_POST['email'])){
         $email = $_POST['email'];
