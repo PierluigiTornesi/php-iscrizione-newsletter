@@ -1,7 +1,7 @@
 <?php 
 
     $flag = false;
-    if((strpos($email,'@')) &&  (strpos($email,'.'))){
+    if((str_contains($email,'@')) &&  (str_contains($email,'.'))){
     $flag = true;
     }
     $class = '';
