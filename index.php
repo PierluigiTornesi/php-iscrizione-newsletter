@@ -24,7 +24,7 @@ session_start();
 <body>
     <form action="index.php" method="post">
         <label for="email">Inserisci la tua email</label>
-        <input type="text" id="email" name="email" placeholder="email@example.com">
+        <input type="text" id="email" name="email" placeholder="email@example.com" value="<?php echo !empty($_POST['email']) ? $_POST['email'] : '' ?>">
 
         <button class="btn btn-primary" type="submit">Invia</button>
     </form>
